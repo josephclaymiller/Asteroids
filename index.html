@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Asteroids</title>
+	<script src="inherits.js"></script>
+	<script src="moving_objects.js"></script>
+	<script src="asteroid.js"></script>
+	<script src="game.js"></script>
+	<script src="bullet.js"></script>
+	<script src="ship.js"></script>
+	<script src="keymaster.js"></script>
+</head>
+<body>
+	<script>
+		// create canvas element and set to game width and height
+		var canvas = document.createElement('canvas');
+		canvas.width  = Asteroids.Game.WIDTH;
+		canvas.height = Asteroids.Game.HEIGHT;
+		// append canvas element to html body
+		var body = document.getElementsByTagName("body")[0];
+		body.appendChild(canvas);
+		// create new game with canvas context
+		var c = canvas.getContext('2d');
+		var game = new Asteroids.Game(c);
+		game.start();
+	</script>
+</body>
+</html>
